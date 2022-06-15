@@ -1,23 +1,14 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import Tarif from "./components/tarif";
+import themeA from "./components/theme300.css";
+import themeB from "./components/theme450.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edi <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tarif theme={themeA} name="300" price="300" speed="10" />
+      <Tarif theme={themeB} name="450" price="450" speed="50" />
     </div>
   );
 }
